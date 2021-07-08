@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>My Profile Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
   <body>
@@ -17,8 +17,9 @@
     <p class="subtitle is-6">
         @isra9710
     </p>
-    <a  class="button is-dark is-outlined is-rounded"  href="#">Git-Hub</a>
-    <a  class="button is-info is-outlined is-rounded"  href="#">LinkedIn</a>
+    <a  class="button is-primary is-outlined is-rounded"  href={{url_for('contact')}}>Contact</a>
+    <a  class="button is-dark is-outlined is-rounded" target="_blank" href="https://github.com/isra9710">Git-Hub</a>
+    <a  class="button is-info is-outlined is-rounded" target="_blank"  href="https://www.linkedin.com/in/israel-r%C3%ADos-contreras-5025b6191/">LinkedIn</a>
   </section>
   <section class="columns">
     <div class="column is-three-fifths is-offset-one-fifth has-background-light">
@@ -33,7 +34,7 @@
                <div class="card m-3 has-background-link-light">
                     <div class="card-content">
                         <h1 class="title">Interests</h1>
-                        <p>{{profile.interests}}</p>
+                        <p>{{profile.interests|safe}}</p>
                     </div>
                 </div>
             </div>
@@ -41,13 +42,13 @@
                 <div class="card m-3 has-background-primary-light">
                     <div class="card-content">
                         <h1 class="title">Experience</h1>
-                        <p>{{profile.experience}}</p>
+                        <p>{{profile.experience|safe}}</p>
                     </div>
                 </div>
                 <div class="card m-3 has-background-warning-light">
                      <div class="card-content">
                          <h1 class="title">Education</h1>
-                         <p>{{profile.education}}</p>
+                         <p>{{profile.education|safe}}</p>
                      </div>
                  </div>
              </div>
